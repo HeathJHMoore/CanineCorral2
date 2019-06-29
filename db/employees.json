@@ -1,0 +1,47 @@
+{
+    "employee1": {
+    "name":"billy",
+    "disposition": "rude",
+    "imageUrl": "https://mm.aiircdn.com/3/5b8d51419125f.png",
+    "fullness": 67,
+    "favPose": "warrior",
+    "isFainting": true,
+    "color": "white"
+    },
+    "employee2": {
+    "name":"billy",
+    "disposition": "rude",
+    "imageUrl": "https://mm.aiircdn.com/3/5b8d51419125f.png",
+    "fullness": 67,
+    "favPose": "warrior",
+    "isFainting": true,
+    "color": "white"
+    },
+    "employee3": {
+    "name":"billy",
+    "disposition": "rude",
+    "imageUrl": "https://mm.aiircdn.com/3/5b8d51419125f.png",
+    "fullness": 67,
+    "favPose": "warrior",
+    "isFainting": true,
+    "color": "white"
+    },
+    "employee4": {
+    "name":"billy",
+    "disposition": "rude",
+    "imageUrl": "https://mm.aiircdn.com/3/5b8d51419125f.png",
+    "fullness": 67,
+    "favPose": "warrior",
+    "isFainting": true,
+    "color": "white"
+    },
+    "employee5": {
+    "name":"billy",
+    "disposition": "rude",
+    "imageUrl": "https://mm.aiircdn.com/3/5b8d51419125f.png",
+    "fullness": 67,
+    "favPose": "warrior",
+    "isFainting": true,
+    "color": "white"
+    }
+}
