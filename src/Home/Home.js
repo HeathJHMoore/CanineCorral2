@@ -1,9 +1,11 @@
 import React from 'react';
 
-import myDogs from '../App/dogs';
-import myEmployees from '../App/employees';
+// import myDogs from '../App/dogs';
+// import myEmployees from '../App/employees';
 import CannineCorral from '../CannineCorral/CannineCorral';
 import EmployeesCorral from '../EmployeesCorral/EmployeesCorral';
+import dogData from '../Helpers/data/getDogs';
+import employeeData from '../Helpers/data/getEmployees';
 
 import './Home.scss';
 
@@ -13,8 +15,23 @@ class Home extends React.Component {
     employees: [],
   }
 
+  getDogs = () => {
+    dogData.getDogs()
+      .then((dogs) => {this.setState({dogs:dogs})})
+      .catch()
+  }
+
+  getEmployees = () => {
+    employeeData.getEmployees()
+      .then((employees) => {this.setState({employees:employees})})
+      .catch()
+  }
+
+
   componentDidMount() {
-    this.setState({dogs: myDogs, employees: myEmployees})
+    this.getDogs();
+    this.getEmployees();
+    // this.setState({dogs: myDogs, employees: myEmployees})
   }
   render() {
     const printDoggies = this.state.dogs;
