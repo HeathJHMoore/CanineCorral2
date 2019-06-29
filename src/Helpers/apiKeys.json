@@ -1,0 +1,11 @@
+{
+  "firebaseKeys" : {
+    "apiKey": "AIzaSyCBarbeMER3olBFmo9XFmPzIaV8tA-dU98",
+    "authDomain": "canine-corral.firebaseapp.com",
+    "databaseURL": "https://canine-corral.firebaseio.com",
+    "projectId": "canine-corral",
+    "storageBucket": "",
+    "messagingSenderId": "1073178133230",
+    "appId": "1:1073178133230:web:ef5cff7cc0b953a6"
+  }
+}

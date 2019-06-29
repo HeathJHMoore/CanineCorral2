@@ -1,0 +1,34 @@
+{
+  "dog1" : {
+    "name":"billy",
+    "disposition": "rude",
+    "imageUrl": "https://i.ytimg.com/vi/Gw_xvtWJ6q0/hqdefault.jpg",
+    "fullness": 67,
+    "favPose": "downward facing dog",
+    "color": "brown"
+  },
+  "dog2" : {
+    "name":"billy",
+    "disposition": "rude",
+    "imageUrl": "https://i.ytimg.com/vi/Gw_xvtWJ6q0/hqdefault.jpg",
+    "fullness": 67,
+    "favPose": "downward facing dog",
+    "color": "white"
+  },
+  "dog3" : {
+    "name":"billy",
+    "disposition": "rude",
+    "imageUrl": "https://i.ytimg.com/vi/Gw_xvtWJ6q0/hqdefault.jpg",
+    "fullness": 67,
+    "favPose": "downward facing dog",
+    "color": "white"
+  },
+  "dog4" : {
+    "name":"billy",
+    "disposition": "rude",
+    "imageUrl": "https://i.ytimg.com/vi/Gw_xvtWJ6q0/hqdefault.jpg",
+    "fullness": 67,
+    "favPose": "downward facing dog",
+    "color": "white"
+  }
+}
