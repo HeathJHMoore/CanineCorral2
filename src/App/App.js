@@ -41,7 +41,7 @@ class App extends React.Component {
     }
     return (
       <div class="App">
-        {/* <MyNavbar authed={authed}/> */}
+        <MyNavbar authed={authed}/>
         {loadComponent()}
       </div>
     )
