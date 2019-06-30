@@ -1,6 +1,6 @@
 {
     "employee1": {
-    "name":"billy",
+    "name":"Bubba",
     "disposition": "rude",
     "imageUrl": "https://mm.aiircdn.com/3/5b8d51419125f.png",
     "fullness": 67,
@@ -9,7 +9,7 @@
     "color": "white"
     },
     "employee2": {
-    "name":"billy",
+    "name":"Barry",
     "disposition": "rude",
     "imageUrl": "https://mm.aiircdn.com/3/5b8d51419125f.png",
     "fullness": 67,
@@ -18,7 +18,7 @@
     "color": "white"
     },
     "employee3": {
-    "name":"billy",
+    "name":"Chad",
     "disposition": "rude",
     "imageUrl": "https://mm.aiircdn.com/3/5b8d51419125f.png",
     "fullness": 67,
@@ -27,7 +27,7 @@
     "color": "white"
     },
     "employee4": {
-    "name":"billy",
+    "name":"Teo",
     "disposition": "rude",
     "imageUrl": "https://mm.aiircdn.com/3/5b8d51419125f.png",
     "fullness": 67,
@@ -36,7 +36,7 @@
     "color": "white"
     },
     "employee5": {
-    "name":"billy",
+    "name":"Bruh",
     "disposition": "rude",
     "imageUrl": "https://mm.aiircdn.com/3/5b8d51419125f.png",
     "fullness": 67,
