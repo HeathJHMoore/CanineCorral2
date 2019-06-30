@@ -1,6 +1,6 @@
 {
   "dog1" : {
-    "name":"billy",
+    "name":"Billy",
     "disposition": "rude",
     "imageUrl": "https://i.ytimg.com/vi/Gw_xvtWJ6q0/hqdefault.jpg",
     "fullness": 67,
@@ -8,7 +8,7 @@
     "color": "brown"
   },
   "dog2" : {
-    "name":"billy",
+    "name":"Chester",
     "disposition": "rude",
     "imageUrl": "https://i.ytimg.com/vi/Gw_xvtWJ6q0/hqdefault.jpg",
     "fullness": 67,
@@ -16,7 +16,7 @@
     "color": "white"
   },
   "dog3" : {
-    "name":"billy",
+    "name":"Hall",
     "disposition": "rude",
     "imageUrl": "https://i.ytimg.com/vi/Gw_xvtWJ6q0/hqdefault.jpg",
     "fullness": 67,
@@ -24,7 +24,7 @@
     "color": "white"
   },
   "dog4" : {
-    "name":"billy",
+    "name":"Dom",
     "disposition": "rude",
     "imageUrl": "https://i.ytimg.com/vi/Gw_xvtWJ6q0/hqdefault.jpg",
     "fullness": 67,
