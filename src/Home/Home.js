@@ -57,8 +57,17 @@ class Home extends React.Component {
       .catch(err => console.error('messed up'));
   };
 
-  addWalk = () => {
-    walksData.addWalk()
+  addWalk = (e) => {
+    const dogName = document.getElementById('dogNameInput').value;
+    const employeeName = document.getElementById('employeeNameInput').value;
+    const dateTime = document.getElementById('dateTimeInput').value;
+    const newWalk = {
+      dogId: dogName,
+      employeeId: employeeName,
+      date: dateTime
+    }
+    console.error(dogName, employeeName, dateTime)
+    walksData.addWalk(newWalk)
       .then(() => this.getWalks())
       .catch();
   };
@@ -103,7 +112,7 @@ class Home extends React.Component {
               <div class="input-group-prepend">
                 <label class="input-group-text" for="inputGroupSelect01">Dog Names</label>
               </div>
-              <select class="custom-select" id="inputGroupSelect01">
+              <select class="custom-select" id="dogNameInput">
                 {this.state.dogNames}
               </select>
             </div>
@@ -111,14 +120,20 @@ class Home extends React.Component {
               <div class="input-group-prepend">
                 <label class="input-group-text" for="inputGroupSelect01">Employee Names</label>
               </div>
-              <select class="custom-select" id="inputGroupSelect01">
+              <select class="custom-select" id="employeeNameInput">
                 {this.state.employeeNames}
               </select>
             </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">Date</label>
+              </div>
+                <input class="form-control" type="datetime-local" id="dateTimeInput"/>
+              </div>
             </div>
             <div className="modal-footer">
               <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" className="btn btn-primary">Save changes</button>
+              <button type="button" className="btn btn-primary" onClick={this.addWalk}>Save changes</button>
             </div>
           </div>
         </div>
