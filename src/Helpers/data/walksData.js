@@ -40,8 +40,6 @@ const getWalks = () => new Promise((resolve, reject) => {
 
 const deleteWalk = (walkID) => axios.delete(`${url}/walks/${walkID}.json`)
 
-const addWalk = (newWalk) => {
-  axios.put(`${url}/walks.json`, newWalk)
-}
+const addWalk = (newWalk) => axios.post(`${url}/walks.json`, newWalk)
 
 export default { getWalks, deleteWalk, addWalk };
