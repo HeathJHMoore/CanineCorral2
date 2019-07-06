@@ -5,7 +5,7 @@ import Walk from '../Walk/Walk';
 class Walks extends React.Component {
   render() {
     const walkComponents = this.props.walks.map((walk) => (
-      <Walk key={walk.id} walk={walk} deleteWalk={this.props.deleteWalk}/>
+      <Walk key={walk.id} walk={walk} deleteWalk={this.props.deleteWalk} editWalk={this.props.editWalk}/>
     ))
     return (
       <div class="row"> 

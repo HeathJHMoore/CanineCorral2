@@ -18,7 +18,8 @@ class Home extends React.Component {
     employees: [],
     walks: [],
     dogNames: [],
-    employeeNames: []
+    employeeNames: [],
+    editingWalk: false,
   }
 
   getDogs = () => {
@@ -26,7 +27,7 @@ class Home extends React.Component {
       .then((dogs) => {
         this.setState({dogs:dogs})
         const dogNames = dogs.map((dog) => {
-          return <option value={dog.id}>{dog.name}</option>
+          return <option id={dog.id} value={dog.id}>{dog.name}</option>
         })
         this.setState({dogNames:dogNames})
       })
@@ -38,7 +39,7 @@ class Home extends React.Component {
       .then((employees) => {
         this.setState({employees:employees})
         const employeeNames = employees.map((employee) => {
-          return <option value={employee.id}>{employee.name}</option>
+          return <option id={employee.id} value={employee.id}>{employee.name}</option>
         })
         this.setState({employeeNames:employeeNames})
       })
@@ -56,6 +57,10 @@ class Home extends React.Component {
       .then(() => this.getWalks())
       .catch(err => console.error('messed up'));
   };
+
+  changeWalkState = () => {
+    this.setState({editingWalk: false})
+  }
 
   addWalk = (e) => {
     const dogName = document.getElementById('dogNameInput').value;
@@ -77,6 +82,12 @@ class Home extends React.Component {
     deleteDog.deleteDog(dogToDelete);
   };
 
+  editWalk = (walk) => {
+    this.setState({editingWalk: true});
+    document.getElementById(walk.dogId).setAttribute('selected', 'true');
+    document.getElementById(walk.employeeId).setAttribute('selected', 'true');
+  }
+
   componentDidMount() {
     this.getDogs();
     this.getEmployees();
@@ -95,14 +106,16 @@ class Home extends React.Component {
       <h2 className="text-center">Hello to my Human friends</h2>
       <EmployeesCorral employees={employeePeople}/>
       <h2 className="text-center">Scheduled Walks</h2>
-      <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+      <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModal" onClick={this.changeWalkState}>
         Add a New Walk
       </button>
       <div className="modal fade" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div className="modal-dialog" role="document">
           <div className="modal-content">
             <div className="modal-header">
-              <h5 className="modal-title" id="exampleModalLabel">Add a New Walk</h5>
+              <h5 className="modal-title" id="exampleModalLabel">
+                {this.state.editingWalk ? 'Edit Walk Information Here': 'Add Walk Information Here'}
+              </h5>
               <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -138,7 +151,7 @@ class Home extends React.Component {
           </div>
         </div>
       </div>
-      <Walks walks={walks} deleteWalk={this.deleteWalk}/>
+      <Walks walks={walks} deleteWalk={this.deleteWalk} editWalk={this.editWalk}/>
       </div>
     )
   }
