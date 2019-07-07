@@ -17,7 +17,6 @@ class Dog extends React.Component {
           <div className="card-body">
             <h5 className="card-title">{dog.name}</h5>
             <p className="card-text">{dog.disposition}</p>
-            <button id={dog.id} className="btn btn-danger" onClick={this.deleteDog}>Delete</button>
           </div>
         </div>
       </div>

@@ -8,6 +8,13 @@ class Walk extends React.Component {
     deleteWalk(walk.id)
   }
 
+  editEvent = (e) => {
+    e.preventDefault();
+    const {walk, editWalk} = this.props;
+    console.error(walk);
+    editWalk(walk);
+  }
+
   render() {
     const { walk } = this.props;
     return (
@@ -18,7 +25,8 @@ class Walk extends React.Component {
             <h3>Dog: {walk.dogName}</h3>
             <h3>Employee: {walk.employeeName}</h3>
             <h3>Time: {walk.date}</h3>
-            <button className="btn btn-danger" onClick={this.deleteEvent}>Delete Walk</button>
+            <button className="btn btn-danger col-12" onClick={this.deleteEvent}>Delete Walk</button>
+            <button className="btn btn-secondary col-12" data-toggle="modal" data-target="#exampleModal" onClick={this.editEvent}>Edit Walk</button>
           </div>
         </div>
       </div>
