@@ -20,6 +20,7 @@ class Home extends React.Component {
     dogNames: [],
     employeeNames: [],
     editingWalk: false,
+    walkBeingEdited: {}
   }
 
   getDogs = () => {
@@ -71,10 +72,18 @@ class Home extends React.Component {
       employeeId: employeeName,
       date: dateTime
     }
-    console.error(dogName, employeeName, dateTime)
-    walksData.addWalk(newWalk)
-      .then(() => this.getWalks())
-      .catch();
+    if (this.state.editingWalk) {
+      walksData.updateWalk(this.state.walkBeingEdited.id, newWalk)
+        .then(() => {
+          this.setState({editingWalk: false, walkBeingEdited: {}});
+          this.getWalks();
+        })
+        .catch();
+    } else {
+      walksData.addWalk(newWalk)
+        .then(() => this.getWalks())
+        .catch();
+    }
   };
 
   deleteDog = (e) => {
@@ -83,9 +92,19 @@ class Home extends React.Component {
   };
 
   editWalk = (walk) => {
-    this.setState({editingWalk: true});
+    this.setState({editingWalk: true, walkBeingEdited: walk});
     document.getElementById(walk.dogId).setAttribute('selected', 'true');
     document.getElementById(walk.employeeId).setAttribute('selected', 'true');
+  }
+
+  submitEditedWalk = (e) => {
+    e.preventDefault();
+    const updatedWalk = {
+      dogId: document.getElementById('dogNameInput').value,
+      employeeId: document.getElementById('employeeNameInput').value,
+      date: document.getElementById('dateTimeInput').value,
+    }
+    walksData.updateWalk(this.state.walkBeingEdited, updatedWalk)
   }
 
   componentDidMount() {
